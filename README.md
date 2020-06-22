@@ -26,4 +26,8 @@ Therefore the agents roles (skills) herein - is based on what all languages the 
 When a job / issue comes in - then the agent is matched based on role and agent selection mode 
 
 # To Execute
+Option1:
 The Solution file (SupportGenie_Purnima.ipynb) is compatible with Jupyter Notebook & can be executed using that.
+Option2:
+In the folder 'python' - you can customise your main.py and execute that on the command prompt
+python main.py
