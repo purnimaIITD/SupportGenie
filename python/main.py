@@ -3,6 +3,13 @@ from Issue import Issue
 from datetime import date
 from utils import *
 
+##################################################################
+# Agent(String name, bool isAvailable, date availableSince, list roleList)
+# Issue(list roleList) 
+# agentSelectionMode: allAvailable | random | leastBusy
+# allocateAgents(Issue, list[Agent], agentSelectionMode)
+####################################################################
+
 # Master agent - Knows everything - has been free the least
 a0 = Agent ('X', True, date.today(), ['hindi', 'english', 'spanish', 'french', 'chinese', 'tamil'])
 # List of agents
@@ -19,15 +26,15 @@ a9 = Agent ('Z', True, date(2020,1,1), ['hindi', 'english', 'spanish', 'french',
 
 agentList = [a0,a1,a2,a3,a4,a5,a6,a7,a8,a9]
 
-testIssue = Issue(['french'])
+testIssue = Issue(['french','hindi'])
 
-agent = allocateAgents(testIssue, agentList, 'random')
+agent = allocateAgents(testIssue, agentList, 'allAvailable')
 
 if type(agent) is list:
     print("Following agents are available for this issue:")
     for a in agent:
         print(a)
-else:
+elif type(agent) is Agent:
     print("The algorithm has selected the following Agent:")
     print(agent)
     

@@ -52,6 +52,7 @@ def allocateAgents(issue, agentList, agentSelectionMode):
     
     if (len(suitableAgents) == 0):
         print("No Agents found for the issue. Please try again.")
+        return allocatedAgent
     else:
         sortedAgentList = sorted(suitableAgents, key=lambda agent: agent.availableSince)
         #DEBUG - print (sortedAgentList)
@@ -59,7 +60,7 @@ def allocateAgents(issue, agentList, agentSelectionMode):
     # Based on agentSelectionMode - select an agent.
     if (agentSelectionMode.lower() == "random"):
         #DEBUG: print("Random Selection Mode")
-        allocatedAgent = sortedAgentList[random.randint(0,len(sortedAgentList) - 1)]
+        allocatedAgent = sortedAgentList[random.randint(0,len(sortedAgentList))]
     elif (agentSelectionMode.lower() == "leastBusy".lower()):
         #DEBUG - print("least Busy Mode")
         allocatedAgent = sortedAgentList[0]
@@ -67,7 +68,7 @@ def allocateAgents(issue, agentList, agentSelectionMode):
         #DEBUG: print("all Available Mode")
         allocatedAgent = sortedAgentList
     else:
-        print("You entered: "+agentSelectionMode)
+        print("You entered: "+agentSelectionMode.strip().lower())
         print("enter a valid Agent Selection Mode: allAvailable | leastBusy | random")
         
     return allocatedAgent

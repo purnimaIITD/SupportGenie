@@ -45,12 +45,12 @@ agentSelectionMode = str(input("Enter an Agent Selection Mode to proceed: allAva
 
 agent = allocateAgents(testIssue, agentList, agentSelectionMode)
 
-print("===== Solution: -------")
+print("")
 if type(agent) is list:
     print("Following agents are available for this issue:")
     for a in agent:
         print(a)
-else:
+elif type(agent) is Agent:
     print("The algorithm has selected the following Agent:")
     print(agent)
     
