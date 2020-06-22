@@ -30,8 +30,8 @@ Option1:
 The Solution file (SupportGenie_Purnima.ipynb) is compatible with Jupyter Notebook & can be executed using that.
 Option2:
 In the folder 'python' - you can customise your main.py and execute that on the command prompt
->> python main.py
+$ python main.py
 Option3:
 If you prefer the command line entry of Issue's role List & agent selection mode - in the folder python execute:
->> python main_cmd.py
+$ python main_cmd.py
 
