@@ -1,8 +1,9 @@
 # SupportGenie
-My SupportGenie's Problem Statement Solutions
+SupportGenie's Problem Statement (refer the pdf file attached) 
+My Solution for the 2nd Problem Set.
 Author: Purnima (purnima.iitd2003@gmail.com)
 
-# Question2:
+# Problem Statement:
 Agent selector
 You are given the following data for agents
 agent
@@ -20,18 +21,27 @@ An issue also has one or many roles (sales/support e.g.).
 
 Issues are presented to agents only with matching roles. Please write a function that takes an input the list of agents with their data, agent selection mode and returns a list of agents the issue should be presented to.
 
-# Solution:
+# Solution Assumption:
 Lets' imagine an agency that provides (agents) translators for diff languages                  
 Therefore the agents roles (skills) herein - is based on what all languages the agent knows    
 When a job / issue comes in - then the agent is matched based on role and agent selection mode 
 
 # To Execute
-Option1:
-The Solution file (SupportGenie_Purnima.ipynb) is compatible with Jupyter Notebook & can be executed using that.
-Option2:
-In the folder 'python' - you can customise your main.py and execute that on the command prompt
-### python main.py
-Option3:
-If you prefer the command line entry of Issue's role List & agent selection mode - in the folder python execute:
-### python main_cmd.py
+## Option1 - Jupyter Notebook:
+The Solution file (./SupportGenie_Purnima.ipynb) is compatible with Jupyter Notebook & can be executed using that.
+
+## Option2 - Command Line Interactive:
+Execute the file main_final.py
+#### python main_final.py
+and follow the command line arguments.
+Please note - there's a defaultAgentList.csv already present - so for testing - you can use that too.
+Or else do feel free to create another. Enjoy!
+
+## Option3 - Command Line Interactive:
+If you don't wish to enter the agentList and just wish to play with the Issue's role List & agent selection mode - execute:
+#### python main_cmd.py
+
+## Option4 - Basic:
+Or you can just execute the basic main.py and code a customised one, on similar lines - to avoid command line entries 
+#### python main.py
 
