@@ -23,9 +23,9 @@ Issues are presented to agents only with matching roles. Please write a function
 
 # Solution Assumption:
 The test cases that I have made and the basic underlying assumption to solve this initially is:
-  Lets' imagine an agency that provides (agents) translators for diff languages                  
-  Therefore the agents roles (skills) herein - is based on what all languages the agent knows    
-  When a job / issue comes in - then the agent is matched based on role and agent selection mode 
+  - Lets' imagine an agency that provides (agents) translators for diff languages                  
+  - Therefore the agents roles (skills) herein - is based on what all languages the agent knows    
+  - When a job / issue comes in - then the agent is matched based on role and agent selection mode 
 But the program should be able to work with any other set of roles as well - just that the roles have been considered as String and preferably in lower case.
 
 # To Execute
