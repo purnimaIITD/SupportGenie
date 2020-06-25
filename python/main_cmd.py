@@ -34,7 +34,7 @@ print("Kindly enter them below, one at a time, preferably in lower case")
 # Reading the issueList
 for i in range(0,n):
 	role = str(input())
-	issueList.append(role)
+	issueList.append(role.strip().lower())
 
 print("The issue needs following roles: ")
 print(issueList)

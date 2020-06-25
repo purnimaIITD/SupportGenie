@@ -32,7 +32,7 @@ def findSuitableAgents(issue, agentList):
         # if yes - add that to the suitableAgent Set
 
             #DEBUG: print("Checking for " + role)            
-            if role in agent.roleList:
+            if role.lower() in agent.roleList:
                 #DEBUG: print("Matched")
                 suitableAgents.add(agent)
             else:
@@ -58,13 +58,13 @@ def allocateAgents(issue, agentList, agentSelectionMode):
         #DEBUG - print (sortedAgentList)
         
     # Based on agentSelectionMode - select an agent.
-    if (agentSelectionMode.lower() == "random"):
+    if (agentSelectionMode.strip().lower() == "random"):
         #DEBUG: print("Random Selection Mode")
         allocatedAgent = sortedAgentList[random.randint(0,len(sortedAgentList))]
-    elif (agentSelectionMode.lower() == "leastBusy".lower()):
+    elif (agentSelectionMode.strip().lower() == "leastBusy".lower()):
         #DEBUG - print("least Busy Mode")
         allocatedAgent = sortedAgentList[0]
-    elif (agentSelectionMode.lower() == "allAvailable".lower()):
+    elif (agentSelectionMode.strip().lower() == "allAvailable".lower()):
         #DEBUG: print("all Available Mode")
         allocatedAgent = sortedAgentList
     else:

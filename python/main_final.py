@@ -54,7 +54,7 @@ with open(agentFile, 'r') as f:
 		# and elements after that - add as roles
 		roleList = []
 		for i in range(3, len(row)):
-			roleList.append(row[i].strip())
+			roleList.append(row[i].strip().lower())
 			
 		# make a Agent element and add to agentList
 		agent = Agent(name, isAvailable, availableSince, roleList)
@@ -75,7 +75,7 @@ print("Kindly enter them below, one at a time, preferably in lower case")
 # Reading the issueList
 for i in range(0,n):
 	role = str(input())
-	issueList.append(role)
+	issueList.append(role.strip().lower())
 
 print("The issue needs following roles: ")
 print(issueList)
