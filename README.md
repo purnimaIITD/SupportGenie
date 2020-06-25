@@ -22,9 +22,11 @@ An issue also has one or many roles (sales/support e.g.).
 Issues are presented to agents only with matching roles. Please write a function that takes an input the list of agents with their data, agent selection mode and returns a list of agents the issue should be presented to.
 
 # Solution Assumption:
-Lets' imagine an agency that provides (agents) translators for diff languages                  
-Therefore the agents roles (skills) herein - is based on what all languages the agent knows    
-When a job / issue comes in - then the agent is matched based on role and agent selection mode 
+The test cases that I have made and the basic underlying assumption to solve this initially is:
+  Lets' imagine an agency that provides (agents) translators for diff languages                  
+  Therefore the agents roles (skills) herein - is based on what all languages the agent knows    
+  When a job / issue comes in - then the agent is matched based on role and agent selection mode 
+But the program should be able to work with any other set of roles as well - just that the roles have been considered as String and preferably in lower case.
 
 # To Execute
 ## Option1 - Jupyter Notebook:
@@ -42,6 +44,6 @@ If you don't wish to enter the agentList and just wish to play with the Issue's 
 #### python main_cmd.py
 
 ## Option4 - Basic:
-Or you can just execute the basic main.py and code a customised one, on similar lines - to avoid command line entries 
+Or you can just execute the basic main.py and code a customised one (based on main_template.py) - for direct execution. 
 #### python main.py
 
